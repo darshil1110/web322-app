@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Post</title>
+    <link rel="stylesheet" href="path/to/your/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Add Post</h2>
+        <form method="post" action="/posts/add" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Feature Image</legend>
+                <div class="form-group">
+                    <input class="form-control" id="featureImage" name="featureImage" type="file" />
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Post Content</legend>
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input class="form-control" id="title" name="title" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="body">Body:</label>
+                    <textarea class="form-control" id="body" name="body" rows="15"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select class="form-control" name="category" id="category">
+                        <option value="1">Technology</option>
+                        <option value="2">Gaming</option>
+                        <option value="3">Fashion</option>
+                        <option value="4">Education</option>
+                        <option value="5">Wellness</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="published">Visibility:</label>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="published" id="published"> Published
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <input type="submit" class="btn btn-primary" value="Add Post" />
+        </form>
+    </div>
+</body>
+</html>
