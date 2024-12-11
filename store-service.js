@@ -88,11 +88,11 @@ function addItem(itemData) {
               })
               .catch((err) => {
                   // Reject the promise with a meaningful message if there's an error
-                  reject(`Unable to create post: ${err.message || "Error occurred"}`);
+                  reject("Unable to create post: ${err.message || 'Error occurred'}");
               });
       } catch (error) {
           // Handle unexpected errors
-          reject(`Unexpected error: ${error.message}`);
+          reject("Unexpected error: ${error.message}");
       }
   });
 }
@@ -193,7 +193,7 @@ function getItemsByMinDate(minDateStr) {
         })
         .catch((err) => {
             // Handle any error that occurs during the operation
-            reject(`Error fetching items: ${err.message || 'no results returned'}`);
+            reject("Error fetching items: ${err.message || 'no results returned'}");
         });
     });
 }
@@ -217,7 +217,7 @@ function getItemById(id) {
       })
       .catch((err) => {
           // Handle any error that occurs during the operation
-          reject(`Error fetching item by ID: ${err.message || 'no results returned'}`);
+          reject("Error fetching item by ID: ${err.message || 'no results returned'}");
       });
   });
 }
